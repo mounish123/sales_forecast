@@ -27,10 +27,13 @@ forecast_series = pd.Series(forecast, index=forecast_index)
 
 # Plot the results
 plt.figure(figsize=(10, 6))
+
 plt.plot(daily_sales['Amount'], label='Historical Sales', color='blue') 
 plt.plot(forecast_series, label='Forecast', color='red', marker='o')
+
 plt.title('Sales Forecast')
 plt.xlabel('Date')
 plt.ylabel('Sales')
 plt.legend()
+
 plt.show()
